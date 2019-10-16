@@ -4,14 +4,15 @@ using namespace std;
 
 int main()
 {
-    int a,oszto;
+   int a,oszto=2;
     bool prim=true;
     cout <<"kerem a vizsgalando szamot " ;
     cin >>a;
-    for (oszto=2;oszto<a/2+1;oszto++){
+    while (oszto<a/2+1){
         if(a%oszto==0){
             prim = false;
         }
+        oszto++;
     }
     if (prim){
         cout <<"a szam prim" ;
@@ -19,5 +20,4 @@ int main()
     else{
         cout <<"a szam nem prim";
     }
-
 }
