@@ -1,0 +1,27 @@
+int a,b,c,d,n,i;
+    bool pall;
+    cout << "kerem a vizsgalando szamot " << endl;
+    cin >> a;
+    d=0;
+    b=a;
+    while (b>0){
+        c=b%10;
+        b=b/10;
+        d=d*10+c;
+
+    }
+    if (a==d)
+        bool pall=true;
+        cout <<"a szam pallindrom";
+    else
+        bool pall=false;
+        cout <<"a szam NEM pallindrom";
+    if (bool pall=false){
+        for(i=1;i<n;i++){
+
+        }
+    }
+
+
+
+    return 0;
