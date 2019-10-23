@@ -4,29 +4,20 @@ using namespace std;
 
 int main()
 {
-    int i,n,S=0;
-    cout <<"hany szamot akarsz megvizsgalni? ";
-    cin >>n;
-    for(i=0; i<n; i++)
-    {
-        int a,oszto;
-        bool prim=true;
-        cout <<"kerem a vizsgalando szamokat " ;
-        cin >>a;
-        for (oszto=2; oszto<a/2+1; oszto++)
-        {
-            if(a%oszto==0)
-            {
-                prim = false;
-            }
-        }
-    if (prim){
-        S=S+a;}
+    int a,b,c,d;
+    cout << "kerem a vizsgalando szamot " << endl;
+    cin >> a;
+    d=0;
+    b=a;
+    while (b>0){
+        c=b%10;
+        b=b/10;
+        d=d*10+c;
 
     }
-    cout <<"a primszamok osszege= "<<S ;
-
-
-
-
+    if (a==d)
+        cout <<"a szam pallindrom";
+    else
+        cout <<"a szam NEM pallindrom";
+    return 0;
 }
