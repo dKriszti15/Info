@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     srand ((unsigned)time (NULL));
-    int x = rand () % 101
+    int x = rand () % 101;
     int a = -1;
     while (a!=x){
         cout <<"kerem a tippet";
