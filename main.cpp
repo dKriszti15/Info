@@ -1,23 +1,28 @@
 #include <iostream>
-
+#include <stdlib.h>
 using namespace std;
 
 int main()
 {
-    int a,b,c,d;
-    cout << "kerem a vizsgalando szamot " << endl;
-    cin >> a;
-    d=0;
-    b=a;
-    while (b>0){
-        c=b%10;
-        b=b/10;
-        d=d*10+c;
+    int v[100000];
+    int i, n;
+    n = 10;
+    for(i=0; i<n; i++)
+    {
+        v[i] = rand()%1000;
+    }
+    for (i=0; i<n-1; i++)
+    {
+        for (int j=i+1; j<n; j++)
+        {
+
+            if (v[i]>v[j])
+            {
+                swap (v[i], v[j]);
+            }
+
+        }
 
     }
-    if (a==d)
-        cout <<"a szam pallindrom";
-    else
-        cout <<"a szam NEM pallindrom";
     return 0;
 }
