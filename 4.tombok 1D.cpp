@@ -5,14 +5,14 @@ using namespace std;
 
 int main()
 {
-    int v[1000];
+    int v[100];
     int n,i;
     srand(time(NULL));
     cout <<"n= ";
     cin >>n;
     for(i=0; i<n; i++)
     {
-        v[i] = rand()%100;
+        v[i] = rand()%1000;
         cout << v[i] << "  ";
     }
     cout <<endl;
@@ -28,16 +28,26 @@ int main()
             }
 
         }
-
     }
-        for (i=0;i<n;i++){
-        cout << v[i] << "\t"<<endl;
+
+    cout << "a masodik legnagyobb elem:"<<v[i-1]<<endl;
+    cout <<"a hamadik legkisebb elem:" << v[2] <<endl;
+
+    while (v[2]!=v[i-1])
+    {
+        if (v[2]>v[i-1])
+        {
+            v[2]=v[2]-v[i-1];
         }
+        if (v[i-1]>v[2])
+        {
+            v[i-1]=v[i-1]-v[2];
+        }
+    }
+    cout << endl;
+    cout <<"a masodik legnagyobb es a harmadik legkisebb elem lnko-ja = " << v[2];
 
-
-
-        cout << "a masodik legnagyobb elem:"<<v[i-2]<<endl;
-        cout <<"a hamadik legkisebb elem:" << v[2] <<endl;
 
     return 0;
 }
+
